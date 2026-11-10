@@ -1,7 +1,7 @@
 import {blank,clone,parseProject,validate} from './model.mjs';
 export const STORAGE_KEY='roundslate-project-v1';
 export function localStore(storage,key=STORAGE_KEY){
- let observed=null,initial=blank(),mode='ready',message='No browser copy yet. Save a part to start.',blocked=false;
+ let observed=null,initial=blank(),mode='ready',message='No browser copy yet. Save game setup or add a round to start.',blocked=false;
  function unavailable(){mode='memory';message='Browser saving unavailable. Work stays in memory only; download a project backup.';blocked=false;}
  try{observed=storage.getItem(key);if(observed!==null){try{initial=parseProject(observed);message='Restored this browser’s saved project.';}catch{mode='invalid';blocked=true;message='The browser copy is invalid or unsupported. It has been preserved. Open a backup or explicitly replace it with this tab.';}}}catch{unavailable();}
  function observe(){if(mode==='memory')return;try{if(storage.getItem(key)!==observed){mode='conflict';blocked=true;message='The browser copy changed in another tab. Export this tab first, then choose which copy to keep.';}}catch{unavailable();}}
