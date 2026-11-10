@@ -2,6 +2,8 @@
 
 **Every round has a story. Keep the numbers straight.**
 
+[Open Roundslate](https://roundslate.vercel.app)
+
 A local score ledger for casual card and board games. Record round point changes, post complete rounds, and keep unfinished entries out of the standings.
 
 ![An actual exported posted-score snapshot](examples/table-standings.svg)
