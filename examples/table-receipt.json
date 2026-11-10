@@ -1,0 +1,111 @@
+{
+  "schema": "roundslate-receipt-v1",
+  "project": {
+    "schema": "roundslate-project-v1",
+    "title": "Friday table · invented example",
+    "notes": "Scores are arbitrary round deltas, not a game-specific scoring system. Draft round 3 is excluded from all standings.",
+    "direction": "high",
+    "players": [
+      {
+        "id": "p1",
+        "name": "Ari"
+      },
+      {
+        "id": "p2",
+        "name": "Bo"
+      },
+      {
+        "id": "p3",
+        "name": "Cam"
+      }
+    ],
+    "rounds": [
+      {
+        "id": "r1",
+        "label": "Round 1",
+        "notes": "",
+        "status": "posted",
+        "scores": {
+          "p1": 12,
+          "p2": 8,
+          "p3": 10
+        }
+      },
+      {
+        "id": "r2",
+        "label": "Round 2",
+        "notes": "Correction notes can go here.",
+        "status": "posted",
+        "scores": {
+          "p1": -2,
+          "p2": 2,
+          "p3": 0
+        }
+      },
+      {
+        "id": "r3",
+        "label": "Round 3",
+        "notes": "Incomplete; not counted yet.",
+        "status": "draft",
+        "scores": {
+          "p1": 20,
+          "p2": null,
+          "p3": 0
+        }
+      }
+    ]
+  },
+  "summary": {
+    "posted": 2,
+    "drafts": 1,
+    "rounds": 3,
+    "standings": [
+      {
+        "id": "p1",
+        "name": "Ari",
+        "total": 10,
+        "rank": 1
+      },
+      {
+        "id": "p2",
+        "name": "Bo",
+        "total": 10,
+        "rank": 1
+      },
+      {
+        "id": "p3",
+        "name": "Cam",
+        "total": 10,
+        "rank": 1
+      }
+    ],
+    "leaders": [
+      "p1",
+      "p2",
+      "p3"
+    ],
+    "roundDetails": [
+      {
+        "id": "r1",
+        "status": "posted",
+        "entered": 3,
+        "required": 3,
+        "total": 30
+      },
+      {
+        "id": "r2",
+        "status": "posted",
+        "entered": 3,
+        "required": 3,
+        "total": 0
+      },
+      {
+        "id": "r3",
+        "status": "draft",
+        "entered": 2,
+        "required": 3,
+        "total": null
+      }
+    ]
+  }
+}
